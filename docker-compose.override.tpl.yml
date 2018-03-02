@@ -1,0 +1,13 @@
+version: '2.0'
+
+services:
+
+  nginx:
+    volumes:
+    - ./docroot:/var/www/html
+    - ./repository:/var/www/repository
+
+  php56:
+    volumes:
+    - ./docroot:/var/www/html      
+    - ./repository:/var/www/repository
