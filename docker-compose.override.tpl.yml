@@ -3,11 +3,22 @@ version: '2.0'
 services:
 
   nginx:
+    container_name: ie_nginx
     volumes:
     - ./docroot:/var/www/html
     - ./repository:/var/www/repository
+    ports:
+    - "127.0.0.1:80:80"
+    networks:
+      default:
+        aliases:
+          - elearning.local
 
   php56:
+    container_name: ie_php56
     volumes:
     - ./docroot:/var/www/html      
     - ./repository:/var/www/repository
+
+  db:
+    container_name: ie_db
