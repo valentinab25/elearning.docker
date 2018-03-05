@@ -20,7 +20,5 @@ services:
   db:
     image: mariadb
     container_name: db
-    environment:
-      MYSQL_ROOT_PASSWORD: "root"
     volumes:
     - ./etc/mysql.server.cnf:/etc/mysql/conf.d/server.cnf
