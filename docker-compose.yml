@@ -7,8 +7,6 @@ services:
     container_name: nginx
     depends_on:
     - php56
-    environment:
-      TZ: "Europe/Bucharest"
     volumes:
       - ./etc/nginx.global.conf:/etc/nginx/conf.d/global.conf
       - ./etc/nginx.elearning.conf:/etc/nginx/conf.d/elearning.conf
