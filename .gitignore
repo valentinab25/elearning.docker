@@ -1,7 +1,6 @@
 docker-compose.override.yml
 docroot
 repository
-etc/nginx.elearning.conf
 .env
 .env.mysql
 .env.mailtrap
