@@ -4,27 +4,16 @@ services:
 
   nginx:
     container_name: elearn_nginx
-    env_file:
-    - .env
-    volumes:
-    - ./docroot:/var/www/html
-    - repository:/var/www/repository
+    restart: unless-stopped
     ports:
-    - "127.0.0.1:8080:80"
+      - "127.0.0.1:8080:80"
 
   php:
-    env_file:
-    - .env
     container_name: elearn_php
-    volumes:
-    - ./docroot:/var/www/html
-    - repository:/var/www/repository
+    restart: unless-stopped
 
   db:
     container_name: elearn_db
-    env_file:
-    - .env
-    - .env.mysql
 
 volumes:
   repository:
