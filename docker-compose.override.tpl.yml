@@ -12,10 +12,10 @@ services:
     ports:
     - "127.0.0.1:8080:80"
 
-  php56:
+  php:
     env_file:
     - .env
-    container_name: elearn_php56
+    container_name: elearn_php
     volumes:
     - ./docroot:/var/www/html
     - repository:/var/www/repository
