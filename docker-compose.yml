@@ -23,7 +23,7 @@ services:
       - ./repository:/var/www/repository
 
   db:
-    image: mariadb:10.3
+    image: mariadb:5.5.56
     volumes:
       - ./etc/mysql.server.cnf:/etc/mysql/conf.d/server.cnf
     env_file:
