@@ -9,8 +9,8 @@ services:
     volumes:
       - ./etc/nginx.global.conf:/etc/nginx/conf.d/global.conf
       - ./etc/nginx.elearning.conf:/etc/nginx/conf.d/elearning.conf
-      - ./docroot:/var/www/html
-      - repository:/var/www/repository
+      - ./docroot:/var/www/html/elearning
+      - ./repository:/var/www/repository
     env_file:
       - .env
 
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./docroot:/var/www/html
+      - ./docroot:/var/www/html/elearning
       - ./repository:/var/www/repository
 
   db:
