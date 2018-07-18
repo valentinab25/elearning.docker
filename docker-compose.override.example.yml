@@ -15,6 +15,15 @@ services:
   db:
     container_name: elearn_db
 
+  mail:
+    image: eaudeweb/mailtrap
+    restart: unless-stopped
+    container_name: elearn_mailtrap
+    env_file:
+      - .env.mailtrap
+    ports:
+      - "127.0.0.1:8825:80"
+
 volumes:
   repository:
     driver: local
