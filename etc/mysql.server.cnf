@@ -1,20 +1,20 @@
 [client]
-default-character-set = utf8mb4
+default-character-set=utf8mb4
 
 [mysql]
-default-character-set = utf8mb4
+default-character-set=utf8mb4
 
 [mysqld]
-character-set-server = utf8mb4
-collation-server = utf8mb4_unicode_ci
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
 skip-character-set-client-handshake
 default-storage-engine=InnoDB
 wait_timeout=10800
 
-max_connections = 128
+max_connections=128
 max_allowed_packet=1024M
 
-open_files_limit = 1024000
+open_files_limit=1024000
 
 net_read_timeout=7200
 net_write_timeout=7200
@@ -22,7 +22,7 @@ net_write_timeout=7200
 table_definition_cache=4096
 table_open_cache=16384
 
-thread_cache_size = 128
+thread_cache_size=128
 
 myisam_sort_buffer_size=64M
 key_buffer_size=16M
@@ -31,22 +31,26 @@ sort_buffer_size=3M
 read_buffer_size=2M
 read_rnd_buffer_size=16M
 join_buffer_size=8M
+query_cache_size=128M
+query_cache_limit=6M
+read_rnd_buffer_size=2M
+join_buffer_size=8M
 
-innodb_file_format = Barracuda
-innodb_large_prefix
+innodb_file_format=Barracuda
+innodb_large_prefix=1
 innodb_file_per_table
 innodb_thread_concurrency=0
 innodb_strict_mode=1
-innodb_log_file_size=512M
+innodb_log_file_size=256M
 innodb_log_buffer_size=4M
-innodb_buffer_pool_size=256M
+innodb_buffer_pool_size=2G
 innodb_flush_log_at_trx_commit = 0
 innodb_lock_wait_timeout = 3600
 innodb_buffer_pool_instances = 1
 innodb_log_files_in_group = 2
 
 # Logging
-slow_query_log=1
+slow_query_log=0
 slow_query_log_file=/tmp/mysql-slow.log
 long_query_time=2
 log_queries_not_using_indexes=1
