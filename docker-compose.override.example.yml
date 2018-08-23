@@ -16,6 +16,7 @@ services:
     container_name: elearn_db
 
   mail:
+    container_name: elearn_db
     image: eaudeweb/mailtrap
     restart: unless-stopped
     container_name: elearn_mailtrap

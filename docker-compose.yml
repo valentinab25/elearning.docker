@@ -29,3 +29,11 @@ services:
     env_file:
       - .env
       - .env.mysql
+
+  mail:
+    image: eeacms/postfix
+    restart: always
+    hostname: elearning.informea.org
+    environment:
+      - MTP_HOST=elearning.informea.org
+      - MTP_DESTINATION=elearning.informea.org
