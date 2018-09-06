@@ -4,3 +4,5 @@ repository
 .env
 .env.mysql
 .env.mailtrap
+ssmtp.conf
+php-fpm.www.conf

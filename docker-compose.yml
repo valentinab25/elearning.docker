@@ -32,7 +32,6 @@ services:
 
   mail:
     image: eeacms/postfix
-    restart: always
     hostname: elearning.informea.org
     environment:
       - MTP_HOST=elearning.informea.org
