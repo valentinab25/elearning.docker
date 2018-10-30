@@ -26,6 +26,7 @@ services:
     image: mariadb:5.5.56
     volumes:
       - ./etc/mysql.server.cnf:/etc/mysql/conf.d/server.cnf
+      - db-data:/var/lib/mysql
     env_file:
       - .env
       - .env.mysql
@@ -36,3 +37,7 @@ services:
     environment:
       - MTP_HOST=elearning.informea.org
       - MTP_DESTINATION=elearning.informea.org
+
+volumes:
+  db-data:
+    driver: local

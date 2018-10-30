@@ -23,7 +23,3 @@ services:
       - .env.mailtrap
     ports:
       - "127.0.0.1:8825:80"
-
-volumes:
-  repository:
-    driver: local
